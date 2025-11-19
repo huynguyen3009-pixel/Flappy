@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Flappy",
+  "description": "A classic arcade game clone enhanced with Gemini AI commentary and reactive feedback.",
+  "requestFramePermissions": []
+}
