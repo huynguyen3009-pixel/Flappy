@@ -239,7 +239,7 @@ export default function App() {
             {gameState === GameState.START && (
                <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center z-50 backdrop-blur-sm">
                   <h1 className="text-6xl text-white font-bold mb-4 text-center drop-shadow-lg">
-                    GEMINI<br/><span className="text-yellow-400">FLAPPY</span>
+                    FLAPPY<br/><span className="text-yellow-400">XI</span>
                   </h1>
                   <p className="text-white text-xl animate-pulse">Press Space or Tap to Start</p>
                </div>
