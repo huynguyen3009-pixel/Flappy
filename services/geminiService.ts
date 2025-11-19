@@ -1,9 +1,18 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const getGameCommentary = async (score: number): Promise<string> => {
+  // Check if API Key exists before initializing to prevent runtime errors
+  const apiKey = process.env.API_KEY;
+  
+  if (!apiKey) {
+    console.warn("API_KEY is missing. Please set it in your .env file or environment variables.");
+    return "Setup API_KEY to hear from Gemini!";
+  }
+
   try {
+    // Initialize lazily to allow the app to load even if key is missing initially
+    const ai = new GoogleGenAI({ apiKey });
+    
     // Select model based on task complexity - simple text generation
     const modelId = 'gemini-2.5-flash'; 
 
